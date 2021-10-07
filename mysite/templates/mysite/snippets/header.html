@@ -1,0 +1,23 @@
+<div class="container">
+    <header class="py-3">
+        <div class="row flex-nowrap justify-content-center align-item-center">
+            <div class="col-4 text-center">
+                <h1 class="display-4 font-italic">Stock Analysis</h1>
+            </div>
+        </div>
+    </header>
+    <div class="py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            <a class="p-2 link-secondary" href="/article">Article</a>
+            <a class="p-2 link-secondary" href="/contact">Contact</a>
+
+            {% if user.is_authenticated %}
+                <a class="p-2 link-secondary" href="/logout">logout</a>
+            {% else %}
+                <a class="p-2 link-secondary" href="/login">login</a>
+                <a class="p-2 link-secondary" href="/signup">Signup</a>
+                {% endif %}
+
+        </nav>
+    </div>    
+</div>

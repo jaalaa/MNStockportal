@@ -1,0 +1,39 @@
+{% extends 'mysite/base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 font-italic border-bottom">
+                Contact
+            </h3>
+
+            <form class="row g-3" method="POST">
+
+                {% csrf_token %}
+
+                <div class="col-12">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" id="id_name" name="name">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">E-Mail</label>
+                    <input type="email" class="form-control" id="id_email" name="email">
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">About</label>
+                    <textarea class="form-control" name="content" rows="4"></textarea>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
